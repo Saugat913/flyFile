@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.send-receive-btn {
+
+
+    height: 5rem;
+    width: 10rem;
+
+    color: white;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.broadcasting-container {
+
+    position: relative;
+    background-image: conic-gradient(transparent 0deg, transparent 45deg, white 45deg, white 315deg, transparent 315deg, transparent 360deg), radial-gradient(rgba(12, 12, 12, 0.5), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.1) 70%, transparent 80%);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+
+
+.orbit-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
