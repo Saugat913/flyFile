@@ -6,7 +6,7 @@ pub const PORT: u16 = 8092;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct BroadcastingPacket {
     pub name: String,
-    avatar: i8,
+    pub avatar: i8,
     pub port: u16,
 }
 
@@ -19,3 +19,6 @@ impl BroadcastingPacket {
         };
     }
 }
+
+
+

@@ -42,3 +42,50 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+
+.wrapper {
+    width: 50px;
+    position: absolute;
+    background: black;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper::before {
+    content: "";
+    outline: 3px solid black;
+    aspect-ratio: 1;
+    position: absolute;
+    width: 50px;
+    border-radius: 100%;
+    animation: anim 3s linear 0s infinite;
+
+}
+
+
+.wrapper::after {
+    content: "";
+    outline: 3px solid black;
+    aspect-ratio: 1;
+    position: absolute;
+    width: 50px;
+    border-radius: 100%;
+    animation: anim 3s linear 1.5s infinite;
+
+
+}
+
+@keyframes anim {
+    0% {}
+
+    100% {
+        width: 500px;
+        opacity: 0;
+    }
+}
