@@ -18,7 +18,7 @@ function getRandomIntString(min, max) {
 function FindingReceiverPage() {
 
 
-    const [popUpArray, setPopUpArray] = useState([]);
+    let [popUpArray, setPopUpArray] = useState([]);
 
     useEffect(() => {
 
@@ -26,6 +26,7 @@ function FindingReceiverPage() {
             console.log(popUpArray);
             const data = event.payload.user_config.user_name; // adjust based on your payload structure
             console.log("Event received:", data);
+
             setPopUpArray([
                 ...popUpArray,
                 data
@@ -45,18 +46,18 @@ function FindingReceiverPage() {
         </div>
 
         <Radar>
-            {
-                popUpArray.map((name) => <div className='w-[100px] h-[100px] rounded-full bg-black' style=
-                    {{
-                        visibility: 'visible',
-                        top: getRandomIntString(100, 200),
-                        right: getRandomIntString(100, 200),
-                        position: 'absolute'
-                    }} onClick={() => {
-                        // invoke("ask_reciever_permission", { receiverInfo: { message: popUpArray[1] } });
-                    }}>{name}</div>)
-            }
         </Radar>
+        {
+            popUpArray.map((name) => <div className='p-[12px] aspect-square rounded-full border-[1px] flex justify-center items-center' style=
+                {{
+                    visibility: 'visible',
+                    top: getRandomIntString(window.innerHeight, 100),
+                    left: getRandomIntString(window.innerWidth, 100),
+                    position: 'absolute'
+                }} onClick={() => {
+                    // invoke("ask_reciever_permission", { receiverInfo: { message: popUpArray[1] } });
+                }}>{name}</div>)
+        }
     </div>
 }
 

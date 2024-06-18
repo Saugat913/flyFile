@@ -96,7 +96,7 @@ pub async fn broadcast(
                 }
             }
             sock.send(broadcasting_packet.as_bytes()).await.unwrap();
-            tokio::time::sleep(Duration::from_secs(20)).await;
+            tokio::time::sleep(Duration::from_secs(2)).await;
         }
     });
 
